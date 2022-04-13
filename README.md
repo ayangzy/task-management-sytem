@@ -40,6 +40,9 @@ Run the following commands each on the project
 php artisan key:generate
 ```
 
+## Migration
+
+Once your application key is generated, run migration
 ```
 php artisan migrate
 ```
