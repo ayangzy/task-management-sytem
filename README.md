@@ -1,6 +1,6 @@
 
 ## Overview 
-This a simple Laravel Web application for Task Mangement System that create and save task in the mysql table.
+This a simple Laravel Web application for Task Mangement that perform an operation based on the requirements below
 
 ## Requirments
 Create task (info to save: task name, priority, timestamps) <br>
