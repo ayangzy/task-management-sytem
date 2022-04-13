@@ -89,10 +89,10 @@
                         </td>
                         
                         <td class="align-middle text-center text-sm">
-                          <span class="text-secondary text-xs font-weight-bold">{{ $task->created_at }}</span>
+                          <span class="text-secondary text-xs font-weight-bold">{{ date('M d, Y / H:i:s', strtotime($task->created_at)) }}</span>
                         </td>
                         <td class="align-middle text-center">
-                          <span class="text-secondary text-xs font-weight-bold">{{ $task->updated_at }}</span>
+                          <span class="text-secondary text-xs font-weight-bold">{{ date('M d, Y / H:i:s', strtotime($task->created_at)) }}</span>
                         </td>
                         <td class="align-middle">
                           <a href="{{ route('task.edit', ['id' => $task->id]) }}" class="text-white font-weight-bold text-xs btn btn-info" data-toggle="tooltip" data-original-title="Edit user">

@@ -23,7 +23,9 @@
   <link id="pagestyle" href="{{ asset('assets/css/material-dashboard.css?v=3.0.2') }}" rel="stylesheet" />
   <script src="{{ asset('js/jquery-2.1.3.min.js') }}"></script>
 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="{{ asset('js/code/jquery-1.12.4.js') }}"></script>
+  <script src="{{ asset('js/code/jquery-ui.js') }}"></script>
+
+  
   
 </head>
