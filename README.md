@@ -18,25 +18,21 @@ BONUS POINT: add project functionality to the tasks. User should be able to sele
 
 This project requires PHP 8.0 and uses Laravel 9
 .  
-You can simply clone  ``simple-subscription-platform`` like below on your git bash
+You can simply clone  ``Task management system`` like below on your git bash
 
 ``` bash
-git clone https://github.com/ayangzy/simple-subscription-platform.git
+git clone https://github.com/ayangzy/task-management-system.git
 ```
 After cloning the project, please run this command on the project directory
 ```
 composer install
 ```
 ### Configure Environment
-To run the application you must configure the ```.env``` environment file with your database details and mail configurations. Use the following commmand to create .env file. 
+To run the application you must configure the ```.env``` environment file with your database details
 ```
 cp .env.example .env
 
 ```
-
-### Please configure your Mail driver in the env to make the application work correctly.
-You have to also configure your mail drivers in the .env file for mail sending, don't also forget to set your  Queue Connection as ``QUEUE_CONNECTION=database``
-
 
 ### Generating app key
 Run the following commands each on the project 
@@ -64,20 +60,6 @@ php artisan optimize
 ``` 
 php artisan serve
 ```
- ### Sending subscription Emails
- When a post is created, the queue can be triggered using the following command
-
- ``` 
- php artisan queue:work
-```
-
-There is also a command that  send email to the subscribers
-``` 
- php artisan subscription-mail:send 29
-```
-Where 29 is the parameter of the post id. Don't also forget to run ``` php artisan queue:work```
-To trigger the command after sending mails
-
 
 ## Security
 
