@@ -27,7 +27,7 @@ class CreateTaskRequest extends FormRequest
 
             'name' => 'required|max:255|unique:tasks,name',
             'project_id' => 'required|exists:projects,id',
-            'priority' => 'required|numeric'
+            'priority' => 'required|numeric',
         ];
     }
 
@@ -35,9 +35,9 @@ class CreateTaskRequest extends FormRequest
     {
         return [
             'name.required' => 'The task name field is required',
-            'name.unique' => "The task name is already added",
+            'name.unique' => 'The task name is already added',
             'project_id.exists' => 'Please select a project name',
-            
+
         ];
     }
 }

@@ -11,12 +11,13 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class TaskFactory extends Factory
 {
-     /**
+    /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
     protected $model = Task::class;
+
     /**
      * Define the model's default state.
      *
@@ -27,7 +28,7 @@ class TaskFactory extends Factory
         return [
             'project_id' => Project::all()->random()->id,
             'name' => $this->faker->name,
-            'priority' => $this->faker->numberBetween(1, 10)
+            'priority' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

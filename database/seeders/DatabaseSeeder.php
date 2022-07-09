@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +15,5 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\Project::factory(5)->create();
         \App\Models\Task::factory(5)->create();
-    
     }
 }
