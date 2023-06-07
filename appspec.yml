@@ -2,23 +2,35 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/
+    destination: /home/ubuntu/var/www/task-manager
 
 permissions:
-  - object: /var/www/storage
+  - object: /home/ubuntu/var/www/task-manager
     pattern: "**"
-    owner: www-data
-    group: www-data
+    owner: ubuntu
+    group: ubuntu
 
 hooks:
   ApplicationStop:
     - location: scripts/application_stop.sh
+      timeout: 300
+      runas: ubuntu
 
   BeforeInstall:
     - location: scripts/before_install.sh
+      timeout: 300
+      runas: ubuntu
 
   AfterInstall:
     - location: scripts/after_install.sh
+      timeout: 300
+      runas: ubuntu
+
+    - location: scripts/nginx.sh
+      timeout: 300
+      runas: ubuntu
 
   ApplicationStart:
     - location: scripts/application_start.sh
+      timeout: 300
+      runas: ubuntu

@@ -3,8 +3,8 @@ version: 0.1
 phases:
   pre_build:
     commands:
-      - echo Prebuild ops
-      - composer update
+      - echo Installing dependencies...
+      - composer install --no-interaction --optimize-autoloader
   build:
     commands:
       - echo Building the application
