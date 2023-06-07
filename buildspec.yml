@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Prebuild ops
-      - composer install
+      - composer update
   build:
     commands:
       - echo Building the application
