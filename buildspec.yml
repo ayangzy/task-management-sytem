@@ -1,16 +1,22 @@
-version: 0.1
+version: 0.3
 
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      php: 8.0
     commands:
       - echo Installing dependencies...
-      - composer update
+      - composer install --no-interaction --optimize-autoloader
+  pre_build:
+    commands:
+      - echo Executing pre-build phase...
   build:
     commands:
-      - echo Building the application
+      - echo Executing build phase...
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Executing post-build phase...
+
 artifacts:
   files:
     - "**/*"

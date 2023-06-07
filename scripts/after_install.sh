@@ -6,6 +6,14 @@ cd /home/ubuntu/var/www/task-manager
 # Update system packages
 sudo apt update
 
+sudo apt install software-properties-common ca-certificates lsb-release apt-transport-https 
+
+LC_ALL=C.UTF-8 sudo add-apt-repository ppa:ondrej/php 
+
+sudo apt update 
+
+sudo apt install php8.0
+
 # Install PHP dependencies
 sudo apt install -y \
     php8.0-common \
