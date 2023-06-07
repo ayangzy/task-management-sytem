@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Remove the existing Laravel application files
-sudo rm -rf /home/ubuntu/var/www/task-manager*
+sudo rm -rf /home/ubuntu/var/www/task-manager/*
 
 # Update system packages
 sudo apt update
