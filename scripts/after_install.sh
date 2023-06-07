@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Navigate to the Laravel application directory
-cd /var/www/task-manager
+cd /home/ubuntu/var/www/task-manager
 
 # Install Composer dependencies
 composer install --optimize-autoloader --no-dev
