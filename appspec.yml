@@ -1,0 +1,35 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/task-manager
+permissions:
+  - object: /home/ubuntu/task-manager
+    owner: ubuntu
+    group: ubuntu
+hooks:
+  BeforeInstall:
+    - location: scripts/clean_instance.sh
+      timeout: 60
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/instance_os_dependencies.sh
+      timeout: 60
+      runas: ubuntu
+    - location: scripts/php_dependencies.sh
+      timeout: 60
+      runas: ubuntu
+    - location: scripts/app_dependencies.sh
+      timeout: 60
+      runas: ubuntu
+    - location: scripts/nginx.sh
+      timeout: 60
+      runas: ubuntu
+  ApplicationStop:
+    - location: scripts/stop_app.sh
+      timeout: 60
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/start_app.sh
+      timeout: 60
+      runas: ubuntu
